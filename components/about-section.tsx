@@ -26,11 +26,7 @@ function StatsCard({ title, value, icon }: { title: string; value: string; icon:
 export default function AboutSection({ aboutY }: AboutSectionProps) {
   return (
     <section id="about" className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-950/20 to-black" />
-      <div className="absolute inset-0">
-        <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full filter blur-3xl" />
-        <div className="absolute bottom-1/4 left-1/3 w-80 h-80 bg-blue-500/10 rounded-full filter blur-3xl" />
-      </div>
+     
 
       <motion.div className="container mx-auto px-4 relative z-10" style={{ y: aboutY }}>
         <motion.div

@@ -16,7 +16,12 @@ export default function HeroSection() {
     { icon: Linkedin, href: "#", label: "LinkedIn" },
   ]
   return (
-    <SectionWrapper className="bg-[#0a0a0a] md:mt-16 h-screen">
+    <SectionWrapper className=" md:mt-16 ">
+       <div className="absolute inset-0 bg-gradient-to-b from-purple-950/20 to-black" />
+      <div className="absolute inset-0">
+        <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full filter blur-3xl" />
+        <div className="absolute bottom-1/4 left-1/3 w-80 h-80 bg-blue-500/10 rounded-full filter blur-3xl" />
+      </div>
       <div className="relative">
         <div className="relative z-10 flex flex-col justify-start p-6 ">
           <h1 className="text-6xl md:text-7xl font-extrabold mb-4 bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent drop-shadow-2xl animate-pulse">

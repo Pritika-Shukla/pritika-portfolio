@@ -87,7 +87,7 @@ const skillIcons: Record<string, React.ReactNode> = {
 
 export default function SkillsSection({ skillsY }: SkillsSectionProps) {
   return (
-    <section id="skills" className="pb-36 relative overflow-hidden">
+    <section id="skills" className="py-36 relative overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute top-1/4 right-1/3 w-72 h-72 bg-purple-500/10 rounded-full filter blur-3xl" />
         <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full filter blur-3xl" />
@@ -114,21 +114,67 @@ export default function SkillsSection({ skillsY }: SkillsSectionProps) {
 
           <div className="flex flex-col items-center gap-4 mt-8">
             {pyramidSkills.map((row, rowIdx) => (
-              <div key={rowIdx} className="flex flex-row justify-center gap-6 flex-wrap">
+              <motion.div 
+                key={rowIdx} 
+                className="flex flex-row justify-center gap-6 flex-wrap"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ 
+                  duration: 0.6, 
+                  delay: rowIdx * 0.1,
+                  staggerChildren: 0.1
+                }}
+                viewport={{ once: true, margin: "-100px" }}
+              >
                 {row.map((skill, idx) => (
-                  <div
+                  <motion.div
                     key={skill.name}
                     className={cn(
                       "relative px-6 py-3 rounded-xl font-semibold text-white text-lg flex items-center gap-2 shadow-lg",
-                      "bg-black/60 backdrop-blur-sm border border-white/10"
+                      "bg-black/60 backdrop-blur-sm border border-white/10",
+                      "hover:bg-black/80 hover:border-white/20 hover:scale-105 transition-all duration-300"
                     )}
                     style={{ zIndex: 1 }}
+                    initial={{ 
+                      opacity: 0, 
+                      y: 20, 
+                      scale: 0.8,
+                      rotateX: -15
+                    }}
+                    whileInView={{ 
+                      opacity: 1, 
+                      y: 0, 
+                      scale: 1,
+                      rotateX: 0
+                    }}
+                    transition={{ 
+                      duration: 0.5, 
+                      delay: (rowIdx * 0.1) + (idx * 0.1),
+                      ease: "easeOut"
+                    }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    whileHover={{ 
+                      y: -5, 
+                      scale: 1.05,
+                      transition: { duration: 0.2 }
+                    }}
                   >
-                    <span>{skillIcons[skill.icon] || <span className="text-xl">?</span>}</span>
+                    <motion.span
+                      initial={{ rotate: -180, scale: 0 }}
+                      whileInView={{ rotate: 0, scale: 1 }}
+                      transition={{ 
+                        duration: 0.6, 
+                        delay: (rowIdx * 0.1) + (idx * 0.1) + 0.2,
+                        ease: "easeOut"
+                      }}
+                      viewport={{ once: true }}
+                    >
+                      {skillIcons[skill.icon] || <span className="text-xl">?</span>}
+                    </motion.span>
                     <span>{skill.name}</span>
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
             ))}
           </div>
         </motion.div>

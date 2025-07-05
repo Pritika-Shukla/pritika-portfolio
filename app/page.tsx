@@ -75,9 +75,6 @@ export default function Portfolio() {
           heroImageY={heroImageY}
         />
 
-        {/* About Section */}
-        <AboutSection aboutY={aboutY} />
-
         {/* Skills Section */}
         <SkillsSection skillsY={skillsY} />
 
