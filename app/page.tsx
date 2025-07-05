@@ -81,8 +81,7 @@ export default function Portfolio() {
         {/* Experience Section */}
         <ExperienceSection />
 
-        {/* Education Section */}
-        <EducationSection />
+      
 
         {/* Contact Section */}
         <ContactSection />
