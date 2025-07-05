@@ -24,15 +24,14 @@ export default function ContactSection() {
             <div className="inline-block px-3 py-1 text-xs font-medium bg-white/10 backdrop-blur-sm rounded-full mb-4">
               Get In Touch
             </div>
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-              Let's Connect
+            <h2 className="text-4xl font-bold mb-6 ">
+             🚀 Let’s Build Something Amazing
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              I'm always open to discussing new opportunities, interesting projects, or just having a chat about
-              technology.
+            Got an idea brewing? I’m always open to collaborating on bold, creative projects that make an impact.
             </p>
           </div>
-
+{/* 
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <motion.div whileHover={{ y: -5 }} className="group">
               <div className="p-1 rounded-2xl bg-gradient-to-br from-purple-500/20 via-blue-500/20 to-cyan-500/20 backdrop-blur-sm h-full group-hover:from-purple-500/30 group-hover:to-blue-500/30 transition-all duration-300">
@@ -69,7 +68,7 @@ export default function ContactSection() {
                 </div>
               </div>
             </motion.div>
-          </div>
+          </div> */}
 
           <div className="mt-16 max-w-3xl mx-auto">
             <div className="p-1 rounded-2xl bg-gradient-to-br from-purple-500/20 via-blue-500/20 to-cyan-500/20 backdrop-blur-sm">
