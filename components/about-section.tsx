@@ -1,93 +1,116 @@
 "use client"
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { Button } from '@/components/ui/button'
+import { Phone, Mail, Linkedin, Zap, Target, Github } from 'lucide-react'
 
-import { motion } from "framer-motion"
-import { Badge } from "@/components/ui/badge"
-import { Briefcase, Code, Database, GraduationCap } from "lucide-react"
+const AboutSection = () => {
+  const { scrollYProgress } = useScroll();
+  const aboutY = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
-interface AboutSectionProps {
-  aboutY: any
-}
-
-// Stats Card Component
-function StatsCard({ title, value, icon }: { title: string; value: string; icon: React.ReactNode }) {
   return (
-    <motion.div whileHover={{ y: -5 }} className="group">
-      <div className="p-1 rounded-xl bg-gradient-to-br from-purple-500/20 via-blue-500/20 to-cyan-500/20 backdrop-blur-sm group-hover:from-purple-500/30 group-hover:to-blue-500/30 transition-all duration-300">
-        <div className="bg-black/60 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center text-center">
-          <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mb-3">{icon}</div>
-          <div className="text-2xl font-bold mb-1">{value}</div>
-          <div className="text-sm text-gray-400">{title}</div>
-        </div>
-      </div>
-    </motion.div>
-  )
-}
+     <section id="about" className="py-20 bg-gradient-to-r from-purple-900/20 to-black/50">
+        <div className="container mx-auto px-6">
+          <motion.div
+            style={{ y: aboutY }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-6xl mx-auto"
+          >
+            <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              About Me
+            </h2>
 
-export default function AboutSection({ aboutY }: AboutSectionProps) {
-  return (
-    <section id="about" className="py-24 relative overflow-hidden">
-     
+            <div className="grid lg:grid-cols-3 gap-12 items-start">
+              {/* Left Column - Story */}
+              <div className="lg:col-span-2 space-y-6">
+                <div className="prose prose-lg prose-invert">
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    I'm a <span className="text-purple-400 font-semibold">21-year-old software and Android developer</span> from India, 
+                    currently working at <span className="text-purple-400 font-semibold">Concertpal.io</span> and actively taking on 
+                    <span className="text-purple-400 font-semibold"> freelance projects</span>.
+                  </p>
 
-      <motion.div className="container mx-auto px-4 relative z-10" style={{ y: aboutY }}>
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="flex flex-col md:flex-row gap-12 items-center">
-            <div className="md:w-1/2">
-              <div className="inline-block px-3 py-1 text-xs font-medium bg-white/10 backdrop-blur-sm rounded-full mb-4">
-                About Me
-              </div>
-              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                Passionate Software Developer
-              </h2>
-              <div className="space-y-4 text-gray-300">
-                <p>
-                  I'm a passionate Software Developer and Full-Stack Engineer currently pursuing my Bachelor's in
-                  Computer Applications. With expertise in modern web technologies like React.js, Next.js, and
-                  Node.js, I specialize in building scalable, high-performance applications.
-                </p>
-                <p>
-                  I have hands-on experience in reducing server downtime, improving user engagement, and implementing
-                  secure authentication systems. My goal is to create innovative solutions that enhance user
-                  experience and drive business growth.
-                </p>
-                <div className="pt-4">
-                  <div className="flex flex-wrap gap-3">
-                    <Badge className="bg-white/10 hover:bg-white/20 text-white">Next.js</Badge>
-                    <Badge className="bg-white/10 hover:bg-white/20 text-white">React</Badge>
-                    <Badge className="bg-white/10 hover:bg-white/20 text-white">Node.js</Badge>
-                    <Badge className="bg-white/10 hover:bg-white/20 text-white">TypeScript</Badge>
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    I focus on building <span className="text-purple-400 font-semibold">clean, efficient, and user-friendly</span> digital 
+                    experiences that actually work well — not just look good. From turning raw ideas into working products 
+                    to fine-tuning performance and usability, I enjoy solving real-world problems with code.
+                  </p>
+
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    Whether it's <span className="text-purple-400 font-semibold">front-end interfaces</span> or 
+                    <span className="text-purple-400 font-semibold"> full-stack logic</span>, I aim to keep things simple, 
+                    functional, and scalable. When I'm not coding, I'm either exploring new tech, contributing to open-source, 
+                    or sipping coffee while planning my next side project.
+                  </p>
+
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    I'm a big believer in <span className="text-purple-400 font-semibold">clean, maintainable code</span> and 
+                    building things people enjoy using. Always open to new challenges, especially when they involve building 
+                    with purpose and working with like-minded teams.
+                  </p>
+                </div>
+
+                {/* Key Highlights */}
+                <div className="grid md:grid-cols-2 gap-6 mt-8">
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-semibold text-white flex items-center gap-2">
+                      <Zap className="h-5 w-5 text-purple-400" />
+                      What I Do
+                    </h3>
+                    <ul className="space-y-2 text-gray-300">
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                        Full-Stack Web Development
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                        Performance Optimization
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                        Cloud Architecture
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                        Team Mentoring
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-semibold text-white flex items-center gap-2">
+                      <Target className="h-5 w-5 text-pink-400" />
+                      My Focus
+                    </h3>
+                    <ul className="space-y-2 text-gray-300">
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
+                        Modern JavaScript Frameworks
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
+                        Scalable System Design
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
+                        User Experience Design
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
+                        Continuous Learning
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div className="md:w-1/2">
-              <div className="relative">
-                {/* Stats cards */}
-                <motion.div
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  viewport={{ once: true }}
-                  className="grid grid-cols-2 gap-4"
-                >
-                  <StatsCard title="Experience" value="2+ Years" icon={<Briefcase className="w-5 h-5" />} />
-                  <StatsCard title="Projects" value="5+" icon={<Code className="w-5 h-5" />} />
-                  <StatsCard title="Technologies" value="15+" icon={<Database className="w-5 h-5" />} />
-                  <StatsCard title="Education" value="BCA" icon={<GraduationCap className="w-5 h-5" />} />
-                </motion.div>
-
-                {/* Decorative elements */}
-                <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl" />
-              </div>
+            
             </div>
-          </div>
-        </motion.div>
-      </motion.div>
-    </section>
+          </motion.div>
+        </div>
+      </section>
   )
-} 
+}
+
+export default AboutSection
