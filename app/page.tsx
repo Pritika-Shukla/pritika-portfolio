@@ -13,6 +13,7 @@ import ExperienceSection from "@/components/experience-section"
 import EducationSection from "@/components/education-section"
 import ContactSection from "@/components/contact-section"
 import Footer from "@/components/footer"
+import ProjectSection from "@/components/project-section"
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("hero")
@@ -81,7 +82,7 @@ export default function Portfolio() {
         {/* Experience Section */}
         <ExperienceSection />
 
-      
+        <ProjectSection />
 
         {/* Contact Section */}
         <ContactSection />
