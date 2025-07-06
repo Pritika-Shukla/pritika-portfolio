@@ -69,9 +69,9 @@ export function Navigation() {
     },
   ];
   return (
-    <div className="flex justify-center   top-0 left-0 right-0 pt-4 mt-4">
+    <div className="fixed z-50 top-8 left-1/2 transform -translate-x-1/2">
       <FloatingDock
-        mobileClassName="translate-y-20" // only for demo, remove for production
+        mobileClassName="translate-y-20" 
         items={links}
       />
     </div>

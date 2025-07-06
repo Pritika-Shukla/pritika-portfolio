@@ -16,7 +16,7 @@ export default function HeroSection() {
     { icon: Linkedin, href: "#", label: "LinkedIn" },
   ];
   return (
-    <SectionWrapper className=" md:mt-4 pt-24 h-[90vh]">
+    <SectionWrapper className=" md:mt-24 pt-24 h-[90vh]">
       <div className="absolute inset-0 z-0">
         <div className="absolute top-10 left-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-10 right-10 w-80 h-80 bg-purple-600/15 rounded-full blur-3xl"></div>

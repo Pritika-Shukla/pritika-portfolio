@@ -137,7 +137,9 @@ export default function SkillsSection({ skillsY }: SkillsSectionProps) {
                     className={cn(
                       "relative px-6 py-3 rounded-xl font-semibold text-white text-lg flex items-center gap-2 shadow-lg",
                       "bg-black/60 backdrop-blur-sm border border-white/10",
-                      "hover:bg-black/80 hover:border-white/20 hover:scale-105 transition-all duration-300"
+                      "hover:bg-gradient-to-r hover:from-blue-600/20 hover:to-purple-600/20",
+                      "hover:border-blue-400/30 hover:shadow-blue-500/25 hover:shadow-xl",
+                      "transition-all duration-300 ease-out cursor-pointer group"
                     )}
                     style={{ zIndex: 1 }}
                     initial={{ 
@@ -159,11 +161,22 @@ export default function SkillsSection({ skillsY }: SkillsSectionProps) {
                     }}
                     viewport={{ once: true, margin: "-50px" }}
                     whileHover={{ 
-                      y: -5, 
-                      scale: 1.05,
-                      transition: { duration: 0.2 }
+                      y: -8, 
+                      scale: 1.08,
+                      rotateY: 5,
+                      transition: { 
+                        duration: 0.3,
+                        ease: "easeOut"
+                      }
+                    }}
+                    whileTap={{
+                      scale: 0.95,
+                      transition: { duration: 0.1 }
                     }}
                   >
+                    {/* Glow effect on hover */}
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
+                    
                     <motion.span
                       initial={{ rotate: -180, scale: 0 }}
                       whileInView={{ rotate: 0, scale: 1 }}
@@ -173,10 +186,16 @@ export default function SkillsSection({ skillsY }: SkillsSectionProps) {
                         ease: "easeOut"
                       }}
                       viewport={{ once: true }}
+                      whileHover={{
+                        rotate: 360,
+                        scale: 1.2,
+                        transition: { duration: 0.4, ease: "easeInOut" }
+                      }}
+                      className="group-hover:text-blue-300 transition-colors duration-300"
                     >
                       {skillIcons[skill.icon] || <span className="text-xl">?</span>}
                     </motion.span>
-                    <span>{skill.name}</span>
+                    <span className="group-hover:text-blue-100 transition-colors duration-300">{skill.name}</span>
                   </motion.div>
                 ))}
               </motion.div>
