@@ -9,7 +9,7 @@ const AboutSection = () => {
   const aboutY = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
   return (
-    <section id="about" className="bg-black/50">
+    <section id="about" className="">
       <div className="">
         <motion.div
           style={{ y: aboutY }}
