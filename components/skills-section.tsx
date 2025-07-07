@@ -25,6 +25,11 @@ import { WebSockets } from "@/public/logos/websockets"
 import { WebRTC } from "@/public/logos/webrtc"
 import { Hono } from "@/public/logos/hono"
 import { ReactNative } from "@/public/logos/reactnative"
+import { Tailwind } from "@/public/logos/tailwind"
+import { Bootstrap } from "@/public/logos/bootstrap"
+import { Nativewind } from "@/public/logos/nativewind"
+import { Framer } from "@/public/logos/framer"
+
 
 interface SkillsSectionProps {
   skillsY: any
@@ -89,13 +94,17 @@ const skillIcons: Record<string, React.ReactNode> = {
   webrtc: <WebRTC />,
   hono: <Hono />,
   reactnative: <ReactNative />,
+ tailwind: <Tailwind />,
+ bootstrap: <Bootstrap />,
+ nativewind: <Nativewind />,
+ framer: <Framer />,
  
   more: <span className="text-xl">…</span>,
 }
 
 export default function SkillsSection({ skillsY }: SkillsSectionProps) {
   return (
-    <section id="skills" className="pb-24 relative overflow-hidden ">
+    <section id="skills" className="pb-28 relative overflow-hidden ">
      
 
       <motion.div className="container mx-auto px-4 relative z-10" style={{ y: skillsY }}>
@@ -176,7 +185,7 @@ export default function SkillsSection({ skillsY }: SkillsSectionProps) {
                     }}
                   >
                     {/* Glow effect on hover */}
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm " />
                     
                     <motion.span
                       initial={{ rotate: -180, scale: 0 }}
@@ -196,7 +205,7 @@ export default function SkillsSection({ skillsY }: SkillsSectionProps) {
                     >
                       {skillIcons[skill.icon] || <span className="text-xl">?</span>}
                     </motion.span>
-                    <span className="group-hover:text-blue-100 transition-colors duration-300">{skill.name}</span>
+                    <span className="group-hover:text-blue-100 transition-colors duration-300 px-4">{skill.name}</span>
                   </motion.div>
                 ))}
               </motion.div>

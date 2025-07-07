@@ -2,53 +2,68 @@ import { motion } from 'framer-motion'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { CardContainer, CardItem } from '@/components/ui/card'
-import { Brain, ExternalLink, Github, Zap } from 'lucide-react'
+import { Brain, ExternalLink, Github, Zap, BookOpen, User } from 'lucide-react'
 import { Globe } from 'lucide-react'
 
 const ProjectSection = () => {
     const projects = [
         {
-          title: "DevTest",
-          description: "Innovative platform combining real-time coding and video conferencing for technical interviews",
+          title: "V3CN ",
+          description: "Next-gen UI library for portfolios and design systems with interactive components and seamless documentation",
           achievements: [
-            "Reduced technical interview time by 30%",
-            "Implemented WebSockets for live collaboration",
-            "Integrated Judge0 API for multi-language execution",
-            "Used Auth0 for secure authentication",
+            "Custom-built interactive components including Discord widget and 3D-hover cards",
+            "Powered by Next.js + Nextra with MDX for seamless documentation integration",
+            "Includes npx v3cn add utility for easy component scaffolding",
+            "Open-source with 44 stars, 11 forks under GNU GPL v3.0",
           ],
-          tech: ["Next.js", "WebSockets", "LiveKit", "Judge0", "Auth0"],
+          tech: ["Next.js", "Nextra", "TypeScript", "TailwindCSS", "Framer Motion", "MDX"],
+          github: "#",
+          live: "#",
+          icon: BookOpen,
+        },
+        {
+          title: "Portfolio",
+          description: "Modern, responsive portfolio showcasing full-stack development skills with advanced animations and interactive components",
+          achievements: [
+            "Built with Next.js 14, TypeScript, and TailwindCSS for optimal performance",
+            "Advanced animations using Framer Motion with parallax scrolling effects",
+            "Custom UI components including Discord widget, floating dock, and 3D-hover cards",
+            "Fully responsive design with dark mode support and smooth navigation",
+          ],
+          tech: ["Next.js", "TypeScript", "TailwindCSS", "Framer Motion", "Radix UI", "GSAP"],
+          github: "#",
+          live: "#",
+          icon: User,
+        },
+        {
+          title: "DevTest",
+          description: "A collaborative interview tool blending real-time coding with video conferencing",
+          achievements: [
+            "Built a full-stack platform with real-time code editor and video chat integration",
+            "Used WebSockets for collaborative coding, chat, and live voice typing",
+            "Integrated Judge0 API to support multi-language code execution",
+            "Auth0 used for secure login and session control",
+          ],
+          tech: ["Next.js", "LiveKit", "WebSockets", "Judge0 API", "Auth0", "Tailwind CSS"],
           github: "#",
           live: "#",
           icon: Zap,
         },
         {
           title: "Medium-Blog",
-          description: "Scalable blogging platform with secure authentication and serverless architecture",
+          description: "Scalable blogging platform with rich features and secure user authentication",
           achievements: [
-            "Full-stack platform with JWT authentication",
-            "Cloudflare Workers serverless backend",
-            "PostgreSQL with Prisma ORM",
-            "Type safety with Zod and TypeScript",
+            "Created full CRUD blogging system with JWT-based login and protected routes",
+            "Built using Cloudflare Workers and Prisma ORM with PostgreSQL for speed and reliability",
+            "Applied Zod for schema validation and TypeScript for type safety",
+            "Modern UI with responsive design and TailwindCSS styling",
           ],
-          tech: ["Next.js", "Cloudflare Workers", "PostgreSQL", "Prisma", "JWT"],
+          tech: ["Next.js", "Cloudflare Workers", "Prisma", "PostgreSQL", "Zod", "TailwindCSS", "TypeScript"],
           github: "#",
           live: "#",
           icon: Globe,
         },
-        {
-          title: "ChatNest",
-          description: "Real-time messaging platform with secure authentication and instant communication",
-          achievements: [
-            "Real-time messaging with WebSockets",
-            "JWT-based access control",
-            "Zustand state management",
-            "MERN stack for scalability",
-          ],
-          tech: ["React", "Node.js", "WebSockets", "MongoDB", "Zustand"],
-          github: "#",
-          live: "#",
-          icon: Brain,
-        },
+        
       ]
     
   return (
@@ -126,7 +141,7 @@ const ProjectSection = () => {
                   <div className={`${index % 2 === 1 ? "lg:col-start-1" : ""}`}>
                     <CardContainer className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border-purple-500/20 backdrop-blur-sm overflow-hidden group hover:scale-105 transition-transform duration-300">
                       <CardItem className="p-0">
-                        <div className="aspect-video bg-gradient-to-br from-purple-900/50 to-pink-900/50 flex items-center justify-center relative overflow-hidden">
+                        <div className="w-[600px] h-[400px] bg-gradient-to-br from-purple-900/50 to-pink-900/50 flex items-center justify-center relative overflow-hidden">
                           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20"></div>
                           <div className="relative z-10 text-center">
                             <project.icon className="h-16 w-16 text-purple-300 mx-auto mb-4" />
@@ -161,5 +176,5 @@ const ProjectSection = () => {
       </section>
   )
 }
-
 export default ProjectSection
+
