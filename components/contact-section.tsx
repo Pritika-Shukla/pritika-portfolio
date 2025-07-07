@@ -1,20 +1,22 @@
 import { motion } from 'framer-motion'
-import { Mail, Phone } from 'lucide-react'
+import { Mail, Twitter } from 'lucide-react'
 import { Linkedin } from 'lucide-react'
 import { Github } from 'lucide-react'
 import React from 'react'
 import { Button } from './ui/button'
 import { Download } from 'lucide-react'
 import { CardContainer, CardItem } from './ui/card'
+import { IconBrandDiscord } from '@tabler/icons-react'
 
 const ContactSection = () => {
   return (
     <section id="contact" className="py-20 bg-black/50">
     <div className="container mx-auto px-6">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-        <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+        <h2 className="text-4xl font-bold text-center  bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
           Let's Connect
         </h2>
+        <p className="text-center text-gray-400 text-lg mb-8"> I'm always open to new opportunities and collaborations.</p>
         <div className="max-w-2xl mx-auto">
           <CardContainer className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border-purple-500/20 backdrop-blur-sm">
             <CardItem className="p-8">
@@ -22,10 +24,10 @@ const ContactSection = () => {
                 <div className="space-y-4">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
-                      <Phone className="h-5 w-5 text-white" />
+                      <Twitter className="h-5 w-5 text-white" />
                     </div>
                     <div>
-                      <p className="text-gray-400 text-sm">Phone</p>
+                      <p className="text-gray-400 text-sm">Twitter</p>
                       <p className="text-white">+91-6294604075</p>
                     </div>
                   </div>
@@ -35,7 +37,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <p className="text-gray-400 text-sm">Email</p>
-                      <p className="text-white">shuklapritika.tech@gmail.com</p>
+                      <p className="text-white">pritikashukla21@gmail.com</p>
                     </div>
                   </div>
                 </div>
@@ -62,9 +64,9 @@ const ContactSection = () => {
               </div>
               <div className="mt-8 pt-6 border-t border-purple-500/20">
                 <div className="flex justify-center gap-4">
-                  <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">
-                    <Mail className="mr-2 h-4 w-4" />
-                    Send Email
+                  <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700" onClick={() => window.open('https://discord.com/users/shukla_pritika', '_blank')}>
+                    <IconBrandDiscord className="mr-2 h-4 w-4" />
+                    Connect on Discord
                   </Button>
                   <Button
                     variant="outline"

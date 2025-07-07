@@ -10,10 +10,10 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Mail, href: "mailto:pritika@example.com", label: "Email" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Github, href: "https://github.com/Pritika-Shukla", label: "GitHub" },
+    { icon: Mail, href: "https://mail.google.com/mail/?view=cm&fs=1&to=pritikashukla21@gmail.com&su=Hello from your portfolio&body=Hi Pritika, I saw your portfolio and would like to connect!", label: "Email" },
+    { icon: Twitter, href: "https://x.com/shukla_pritika", label: "Twitter" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/pritika-shukla-967350234/", label: "LinkedIn" },
   ];
   return (
     <SectionWrapper className=" md:mt-24 pt-24 h-[90vh]">

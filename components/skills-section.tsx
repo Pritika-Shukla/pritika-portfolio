@@ -95,7 +95,7 @@ const skillIcons: Record<string, React.ReactNode> = {
 
 export default function SkillsSection({ skillsY }: SkillsSectionProps) {
   return (
-    <section id="skills" className="pb-24 relative overflow-hidden">
+    <section id="skills" className="pb-24 relative overflow-hidden ">
      
 
       <motion.div className="container mx-auto px-4 relative z-10" style={{ y: skillsY }}>
@@ -117,7 +117,8 @@ export default function SkillsSection({ skillsY }: SkillsSectionProps) {
             </p>
           </div>
 
-          <div className="flex flex-col items-center gap-4 mt-8">
+          <div className="flex flex-col items-center gap-4 mt-8
+          ">
             {pyramidSkills.map((row, rowIdx) => (
               <motion.div 
                 key={rowIdx} 
@@ -136,7 +137,7 @@ export default function SkillsSection({ skillsY }: SkillsSectionProps) {
                     key={skill.name}
                     className={cn(
                       "relative px-6 py-3 rounded-xl font-semibold text-white text-lg flex items-center gap-2 shadow-lg",
-                      "bg-black/60 backdrop-blur-sm border border-white/10",
+                      " backdrop-blur-sm border border-white/10",
                       "hover:bg-gradient-to-r hover:from-blue-600/20 hover:to-purple-600/20",
                       "hover:border-blue-400/30 hover:shadow-blue-500/25 hover:shadow-xl",
                       "transition-all duration-300 ease-out cursor-pointer group"

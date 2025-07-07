@@ -1,15 +1,23 @@
 import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
-  IconBrandGithub,
-  IconBrandX,
-  IconExchange,
+  IconMail,
   IconHome,
-  IconNewSection,
-  IconTerminal2,
+  IconUser,
+  IconCode,
+  IconBriefcase,
+  IconSchool,
+  IconStack,
 } from "@tabler/icons-react";
 
 export function Navigation() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const links = [
     {
       title: "Home",
@@ -18,61 +26,65 @@ export function Navigation() {
       ),
       href: "#",
     },
-
     {
-      title: "Products",
+      title: "About",
       icon: (
-        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconUser className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
     },
     {
-      title: "Components",
+      title: "Skills",
       icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconStack className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
     },
     {
-      title: "Aceternity UI",
+      title: "Experience",
       icon: (
-        <img
-          src="https://assets.aceternity.com/logo-dark.png"
-          width={20}
-          height={20}
-          alt="Aceternity Logo"
-        />
+        <IconBriefcase className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
     },
     {
-      title: "Changelog",
+      title: "Projects",
       icon: (
-        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-
-    {
-      title: "Twitter",
-      icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconCode className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
     },
     {
-      title: "GitHub",
+      title: "Contact",
       icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconMail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
     },
   ];
+  
+  const handleItemClick = (item: any) => {
+    const sectionMap: { [key: string]: string } = {
+      "Home": "hero",
+      "About": "about",
+      "Skills": "skills",
+      "Experience": "experience",
+      "Projects": "projects",
+      "Contact": "contact",
+    };
+    
+    const sectionId = sectionMap[item.title];
+    if (sectionId) {
+      scrollToSection(sectionId);
+    }
+  };
+  
   return (
     <div className="fixed z-50 top-8 left-1/2 transform -translate-x-1/2">
       <FloatingDock
         mobileClassName="translate-y-20" 
         items={links}
+        onItemClick={handleItemClick}
       />
     </div>
   );
