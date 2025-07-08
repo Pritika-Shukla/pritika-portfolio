@@ -90,14 +90,14 @@ const ProjectSection = () => {
                   }`}
                 >
                   {/* Project Info */}
-                  <div className={`space-y-6 ${index % 2 === 1 ? "lg:col-start-2" : ""}`}>
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                  <div className={`space-y-6 ${index % 2 === 1 ? "lg:col-start-2" : ""} lg:col-span-1`}>
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
                         <project.icon className="h-6 w-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold text-white">{project.title}</h3>
-                        <p className="text-gray-400">{project.description}</p>
+                        <h3 className="text-xl sm:text-2xl font-bold text-white">{project.title}</h3>
+                        <p className="text-gray-400 text-sm sm:text-base">{project.description}</p>
                       </div>
                     </div>
 
@@ -122,7 +122,7 @@ const ProjectSection = () => {
                       ))}
                     </div>
 
-                    <div className="flex gap-4">
+                    <div className="flex flex-col sm:flex-row gap-4">
                       <Button
                         variant="outline"
                         className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black bg-transparent"
@@ -138,10 +138,10 @@ const ProjectSection = () => {
                   </div>
 
                   {/* Project Visual */}
-                  <div className={`${index % 2 === 1 ? "lg:col-start-1" : ""}`}>
+                  <div className={`hidden lg:block ${index % 2 === 1 ? "lg:col-start-1" : ""}`}>
                     <CardContainer className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border-purple-500/20 backdrop-blur-sm overflow-hidden group hover:scale-105 transition-transform duration-300">
                       <CardItem className="p-0">
-                        <div className="w-[600px] h-[400px] bg-gradient-to-br from-purple-900/50 to-pink-900/50 flex items-center justify-center relative overflow-hidden">
+                        <div className="w-full max-w-[600px] h-[400px] bg-gradient-to-br from-purple-900/50 to-pink-900/50 flex items-center justify-center relative overflow-hidden">
                           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20"></div>
                           <div className="relative z-10 text-center">
                             <project.icon className="h-16 w-16 text-purple-300 mx-auto mb-4" />

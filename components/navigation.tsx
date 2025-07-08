@@ -80,7 +80,7 @@ export function Navigation() {
   };
   
   return (
-    <div className="fixed z-50 top-8 left-1/2 transform -translate-x-1/2">
+    <div className="fixed z-50 top-8 left-1/2 transform -translate-x-1/2 sm:block hidden">
       <FloatingDock
         mobileClassName="translate-y-20" 
         items={links}
