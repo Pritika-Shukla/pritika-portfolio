@@ -16,7 +16,7 @@ export default function HeroSection() {
     { icon: Linkedin, href: "https://www.linkedin.com/in/pritika-shukla-967350234/", label: "LinkedIn" },
   ];
   return (
-    <SectionWrapper className="min-h-[90vh] flex items-center md:pt-24 ">
+    <SectionWrapper className="md:min-h-[90vh] flex items-center md:pt-24 pt-16 ">
       <div className="absolute inset-0 z-0">
         <div className="absolute top-10 left-10 w-48 h-48 md:w-96 md:h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-10 right-10 w-40 h-40 md:w-80 md:h-80 bg-purple-600/15 rounded-full blur-3xl"></div>
