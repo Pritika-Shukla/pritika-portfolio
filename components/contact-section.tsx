@@ -28,7 +28,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <p className="text-gray-400 text-sm">Twitter</p>
-                      <p className="text-white">+91-6294604075</p>
+                      <p className="text-white">shukla_pritika</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -57,7 +57,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <p className="text-gray-400 text-sm">GitHub</p>
-                      <p className="text-white">pritika-shukla</p>
+                      <p className="text-white">Pritika-Shukla</p>
                     </div>
                   </div>
                 </div>

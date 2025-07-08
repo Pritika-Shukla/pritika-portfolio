@@ -17,8 +17,8 @@ const ProjectSection = () => {
             "Open-source with 44 stars, 11 forks under GNU GPL v3.0",
           ],
           tech: ["Next.js", "Nextra", "TypeScript", "TailwindCSS", "Framer Motion", "MDX"],
-          github: "#",
-          live: "#",
+          github: "https://github.com/VineeTagarwaL-code/v3cn-docs",
+          live: "https://v3cn.vineet.pro/",
           icon: BookOpen,
         },
         {
@@ -31,8 +31,8 @@ const ProjectSection = () => {
             "Fully responsive design with dark mode support and smooth navigation",
           ],
           tech: ["Next.js", "TypeScript", "TailwindCSS", "Framer Motion", "Radix UI", "GSAP"],
-          github: "#",
-          live: "#",
+          github: "https://github.com/Pritika-Shukla/pritika-portfolio",
+          live: "https://www.pritika.xyz/",
           icon: User,
         },
         {
@@ -45,8 +45,8 @@ const ProjectSection = () => {
             "Auth0 used for secure login and session control",
           ],
           tech: ["Next.js", "LiveKit", "WebSockets", "Judge0 API", "Auth0", "Tailwind CSS"],
-          github: "#",
-          live: "#",
+          github: "https://github.com/VineeTagarwaL-code/DevTest",
+          live: "https://github.com/VineeTagarwaL-code/DevTest",
           icon: Zap,
         },
         {
@@ -59,8 +59,8 @@ const ProjectSection = () => {
             "Modern UI with responsive design and TailwindCSS styling",
           ],
           tech: ["Next.js", "Cloudflare Workers", "Prisma", "PostgreSQL", "Zod", "TailwindCSS", "TypeScript"],
-          github: "#",
-          live: "#",
+          github: "https://github.com/Pritika-Shukla/Medium-Blog",
+          live: "https://github.com/Pritika-Shukla/Medium-Blog",
           icon: Globe,
         },
         
@@ -126,11 +126,15 @@ const ProjectSection = () => {
                       <Button
                         variant="outline"
                         className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black bg-transparent"
+                        onClick={() => window.open(project.github, '_blank')}
                       >
                         <Github className="mr-2 h-4 w-4" />
                         View Code
                       </Button>
-                      <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">
+                      <Button 
+                        className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+                        onClick={() => window.open(project.live, '_blank')}
+                      >
                         <ExternalLink className="mr-2 h-4 w-4" />
                         Live Demo
                       </Button>
@@ -153,6 +157,7 @@ const ProjectSection = () => {
                               size="sm"
                               variant="ghost"
                               className="bg-black/20 backdrop-blur-sm text-white hover:bg-black/40"
+                              onClick={() => window.open(project.github, '_blank')}
                             >
                               <Github className="h-4 w-4" />
                             </Button>
@@ -160,6 +165,7 @@ const ProjectSection = () => {
                               size="sm"
                               variant="ghost"
                               className="bg-black/20 backdrop-blur-sm text-white hover:bg-black/40"
+                              onClick={() => window.open(project.live, '_blank')}
                             >
                               <ExternalLink className="h-4 w-4" />
                             </Button>

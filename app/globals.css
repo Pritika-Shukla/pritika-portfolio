@@ -31,22 +31,19 @@ body {
   overflow-x: hidden;
 }
 
-/* Custom scrollbar */
+/* Hide scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  display: none;
 }
 
-::-webkit-scrollbar-track {
-  background: #18181b;
+/* For Firefox */
+* {
+  scrollbar-width: none;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #52525b;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #71717a;
+/* For IE and Edge */
+* {
+  -ms-overflow-style: none;
 }
 
 /* Smooth scrolling */
