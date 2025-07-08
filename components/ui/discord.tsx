@@ -126,7 +126,8 @@ export const Discord: React.FC<TDiscord> = ({
               />
             ) : null}
             <div className="flex flex-row flex-nowrap gap-2">
-              <span className="capitalize">{userName}</span> •{" "}
+              <span className="capitalize">{userName}</span>
+              <span className="hidden sm:inline"> • </span>
               <LocalTime localTimeClass={localTimeClass} />
             </div>
           </div>
@@ -338,23 +339,25 @@ type TLocalTime = {
 };
 
 const LocalTime: React.FC<TLocalTime> = ({ localTimeClass }: TLocalTime) => {
-  const [localTime, setLocalTime] = useState<string>(
-    new Date().toLocaleTimeString()
-  );
-
-  const setLocalTimeState = () => {
-    setLocalTime(new Date().toLocaleTimeString());
-  };
+  const [now, setNow] = useState<Date>(new Date());
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-
-    const intervalId = window.setInterval(setLocalTimeState, 1000); // Update local time every second
-
+    const intervalId = window.setInterval(() => setNow(new Date()), 1000);
     return () => clearInterval(intervalId);
   }, []);
 
-  return <span className={localTimeClass}>{localTime}</span>;
+  // Format for mobile (no seconds)
+  const timeNoSeconds = now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', hour12: true });
+  // Format for desktop (with seconds)
+  const timeWithSeconds = now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', second: '2-digit', hour12: true });
+
+  return (
+    <>
+      <span className={cn('sm:hidden whitespace-nowrap', localTimeClass)}>{timeNoSeconds}</span>
+      <span className={cn('hidden sm:inline whitespace-nowrap', localTimeClass)}>{timeWithSeconds}</span>
+    </>
+  );
 };
 
 type progressProps = {
