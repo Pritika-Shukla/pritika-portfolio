@@ -125,19 +125,19 @@ const ProjectSection = () => {
                     <div className="flex flex-col sm:flex-row gap-4">
                       <Button
                         variant="outline"
-                        className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black bg-transparent"
+                        className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
                         onClick={() => window.open(project.github, '_blank')}
                       >
                         <Github className="mr-2 h-4 w-4" />
                         View Code
                       </Button>
-                      <Button 
+                      {/* <Button 
                         className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
                         onClick={() => window.open(project.live, '_blank')}
                       >
                         <ExternalLink className="mr-2 h-4 w-4" />
                         Live Demo
-                      </Button>
+                      </Button> */}
                     </div>
                   </div>
 

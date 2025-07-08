@@ -295,12 +295,12 @@ const ImageCont: React.FC<TImageCont> = ({
   return (
     <div
       className={cn(
-        "relative max-w-[100px] ",
+        "relative max-w-[110px] ",
         activityImageClassName
       )}
     >
       {activityImage.largeActivityImage == "" ? (
-        <div className="animate-pulse bg-gray-500 rounded-2xl"></div>
+        <div className="animate-pulse bg-gray-500 rounded-2xl  h-[110px]"></div>
       ) : (
         <Image
           src={activityImage.largeActivityImage || "/default.png"}
@@ -311,8 +311,8 @@ const ImageCont: React.FC<TImageCont> = ({
               "animate-[spin_40s_linear_infinite] rounded-full"
             }`
           )}
-          width={100}
-          height={100}
+          width={110}
+          height={110}
           alt="Activity Image"
         />
       )}
