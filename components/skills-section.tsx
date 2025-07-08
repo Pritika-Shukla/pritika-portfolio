@@ -263,7 +263,7 @@ export default function SkillsSection({ skillsY }: SkillsSectionProps) {
                         "hover:bg-gradient-to-r hover:from-blue-600/20 hover:to-purple-600/20",
                         "hover:border-blue-400/30 hover:shadow-blue-500/25 hover:shadow-xl",
                         "transition-all duration-300 ease-out cursor-pointer group",
-                        "min-w-[140px] min-h-[44px] flex-1 max-w-[160px]", // Better touch targets
+                        "min-w-[150px] min-h-[44px] flex-1 max-w-[160px]", // Better touch targets
                       )}
                       style={{ zIndex: 1 }}
                       initial={{
