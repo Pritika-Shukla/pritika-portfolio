@@ -23,36 +23,34 @@ interface Project {
 
 const experiences: Experience[] = [
   {
-    title: "Software Developer",
-    company: "Concertpal.io",
+    title: "Software Engineer",
+    company: "ConcertPal.io",
     period: "Dec 2024 - Present",
     achievements: [
-      "Reduced server downtime by 30% by setting up a production-ready VPS with automated CI/CD deployments and robust security hardening practices",
-      "Designed and implemented a highly scalable and optimized UI, leading to a 25% improvement in performance and smoother user experience",
-      "Built secure backend services with API rate limiting, blocking 40% of unauthorized access attempts; performed stress and penetration testing to strengthen system reliability",
-      "Spearheaded the development of two mobile apps using React Native, Expo, and NativeWind as company side projects, focusing on mobile-first design and consistent UI",
+      "Built a real-time voice cloning feature with speech-to-text and text-to-speech pipelines for live calls, handling low-latency audio processing across multiple concurrent streams",
+      "Developed a cross-platform application serving 1,000+ concurrent daily users, managing multiple features with a focus on performance and reliability",
+      "Built web scrapers that extracted and aggregated data from multiple sources in real-time",
+      "Created a ticket comparison platform delivering sub-second price comparisons across different platforms to handle concurrent lookups at scale",
     ],
   },
   {
-    title: "Frontend Developer",
+    title: "Frontend Engineer",
     company: "YUGA",
-    period: "April 2025 - Present",
+    period: "March 2025 - July 2025",
     achievements: [
-      "Redesigned and rebuilt the entire frontend UI of the YUGA platform within 1.5 weeks, meeting a critical event deadline and enhancing usability across devices",
-      "Integrated WebSocket-based real-time scoring logic, improving the responsiveness and accuracy of live judge evaluations during competitions",
-      "Implemented and optimized features for traditional, rhythmic, and artistic yoga events, making the platform scalable for diverse event formats",
-      "Continuously improved the UI/UX of the platform with micro-interactions and responsive layouts, increasing visual appeal and user engagement",
+      "Rebuilt the entire frontend using Next.js and Tailwind CSS, delivering a fast, responsive UI that worked smoothly for live events",
+      "Built a real-time scoring system with WebSockets, allowing judges to submit scores instantly with sub-second updates",
+      "Created reusable UI components to support different yoga event formats, reducing duplication and simplifying future feature additions",
     ],
   },
   {
-    title: "Front-End Developer Intern",
+    title: "Frontend Intern",
     company: "Good Game Theory",
-    period: "October 2024 - January 2025",
+    period: "Oct 2024 - Jan 2025",
     achievements: [
-      "Built and deployed the Money Mafia Book Landing Page, achieving a 30% faster load time and significantly improving SEO and Lighthouse scores",
-      "Developed an interactive Progressive Web App (PWA) with gamified quizzes, increasing user engagement by 35% and improving session retention",
-      "Engineered a game-based learning platform with backend integration to automatically generate quizzes from YouTube video data, enhanced with smooth animations, boosting user interaction by 40%",
-      "Mentored junior frontend developers in React.js, promoting best practices and reducing code review issues by 25% through clean code principles and modular architecture",
+      "Built an interactive PWA with quiz features that improved user engagement and retention",
+      "Developed a game-based web platform integrated with a backend service that extracts data from YouTube videos to generate quizzes, with animations to improve user interaction",
+      "Led a frontend team of 15 developers by organizing tasks, reviewing code, and maintaining consistent React.js coding standards",
     ],
   },
 ]
