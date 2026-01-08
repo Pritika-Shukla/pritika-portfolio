@@ -22,7 +22,10 @@ const ContactSection = () => {
             <CardItem className="p-6 sm:p-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 <div className="space-y-6">
-                  <div className="flex items-center gap-4 md:gap-4">
+                  <div 
+                    className="flex items-center gap-4 md:gap-4 cursor-pointer hover:opacity-80 transition-opacity"
+                    onClick={() => window.open('https://x.com/shukla_pritika', '_blank')}
+                  >
                     <div className="w-12 h-12 md:w-12 md:h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0">
                       <Twitter className="h-5 w-5 md:h-5 md:w-5 text-white" />
                     </div>
@@ -31,7 +34,10 @@ const ContactSection = () => {
                       <p className="text-white text-base md:text-base truncate">shukla_pritika</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4 md:gap-4">
+                  <div 
+                    className="flex items-center gap-4 md:gap-4 cursor-pointer hover:opacity-80 transition-opacity"
+                    onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=pritikashukla21@gmail.com', '_blank')}
+                  >
                     <div className="w-12 h-12 md:w-12 md:h-12 bg-gradient-to-br from-pink-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
                       <Mail className="h-5 w-5 md:h-5 md:w-5 text-white" />
                     </div>
@@ -42,7 +48,10 @@ const ContactSection = () => {
                   </div>
                 </div>
                 <div className="space-y-6">
-                  <div className="flex items-center gap-4 md:gap-4">
+                  <div 
+                    className="flex items-center gap-4 md:gap-4 cursor-pointer hover:opacity-80 transition-opacity"
+                    onClick={() => window.open('https://www.linkedin.com/in/pritika-shukla-967350234/', '_blank')}
+                  >
                     <div className="w-12 h-12 md:w-12 md:h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
                       <Linkedin className="h-5 w-5 md:h-5 md:w-5 text-white" />
                     </div>
@@ -51,7 +60,10 @@ const ContactSection = () => {
                       <p className="text-white text-base md:text-base truncate">pritika-shukla-967350234</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4 md:gap-4">
+                  <div 
+                    className="flex items-center gap-4 md:gap-4 cursor-pointer hover:opacity-80 transition-opacity"
+                    onClick={() => window.open('https://github.com/Pritika-Shukla', '_blank')}
+                  >
                     <div className="w-12 h-12 md:w-12 md:h-12 bg-gradient-to-br from-gray-700 to-purple-700 rounded-full flex items-center justify-center flex-shrink-0">
                       <Github className="h-5 w-5 md:h-5 md:w-5 text-white" />
                     </div>
@@ -71,6 +83,14 @@ const ContactSection = () => {
                   <Button
                     variant="outline"
                     className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black bg-transparent text-sm md:text-base"
+                    onClick={() => {
+                      const link = document.createElement('a');
+                      link.href = '/Pritika-Shukla.pdf';
+                      link.download = 'Pritika-Shukla.pdf';
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }}
                   >
                     <Download className="mr-2 h-4 w-4" />
                     Download CV

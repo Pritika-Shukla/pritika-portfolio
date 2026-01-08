@@ -138,7 +138,7 @@ const items = [
           "Secure authentication with Clerk and scalable data storage using Prisma with MongoDB",
         ],
         className: "md:col-span-2",
-        github: "https://github.com/Pritika-Shukla/StockPulse",
+        github: "https://github.com/Pritika-Shukla/StockLive",
         live: "https://stockpulse.pritika.xyz/",
       },
   {
