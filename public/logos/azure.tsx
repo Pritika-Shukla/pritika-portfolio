@@ -17,8 +17,8 @@ export const Azure = () => {
         gradientTransform="translate(1981.75 -1362.063) scale(1.5625)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#114a8b"></stop>
-        <stop offset="1" stop-color="#0669bc"></stop>
+        <stop offset="0" stopColor="#114a8b"></stop>
+        <stop offset="1" stopColor="#0669bc"></stop>
       </linearGradient>
       <path
         fill="url(#k8yl7~hDat~FaoWq8WjN6a_VLKafOkk3sBX_gr1)"
@@ -37,11 +37,11 @@ export const Azure = () => {
         gradientTransform="translate(1981.75 -1362.063) scale(1.5625)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-opacity=".3"></stop>
-        <stop offset=".071" stop-opacity=".2"></stop>
-        <stop offset=".321" stop-opacity=".1"></stop>
-        <stop offset=".623" stop-opacity=".05"></stop>
-        <stop offset="1" stop-opacity="0"></stop>
+        <stop offset="0" stopOpacity=".3"></stop>
+        <stop offset=".071" stopOpacity=".2"></stop>
+        <stop offset=".321" stopOpacity=".1"></stop>
+        <stop offset=".623" stopOpacity=".05"></stop>
+        <stop offset="1" stopOpacity="0"></stop>
       </linearGradient>
       <path
         fill="url(#k8yl7~hDat~FaoWq8WjN6b_VLKafOkk3sBX_gr2)"
@@ -56,8 +56,8 @@ export const Azure = () => {
         gradientTransform="translate(1981.75 -1362.063) scale(1.5625)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#3ccbf4"></stop>
-        <stop offset="1" stop-color="#2892df"></stop>
+        <stop offset="0" stopColor="#3ccbf4"></stop>
+        <stop offset="1" stopColor="#2892df"></stop>
       </linearGradient>
       <path
         fill="url(#k8yl7~hDat~FaoWq8WjN6c_VLKafOkk3sBX_gr3)"
