@@ -13,7 +13,7 @@ import ExperienceSection from "@/components/experience-section";
 import EducationSection from "@/components/education-section";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
-import ProjectSection from "@/components/project-section";
+import { BentoGridSecondDemo } from "@/components/ui/bento-grid";
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("hero");
@@ -35,6 +35,7 @@ export default function Portfolio() {
         "about",
         "skills",
         "experience",
+        "projects",
         "education",
         "contact",
       ];
@@ -92,7 +93,21 @@ export default function Portfolio() {
         {/* Experience Section */}
         <ExperienceSection />
 
-        <ProjectSection />
+        {/* Projects Section */}
+        <section id="projects" className="py-20 bg-black/50">
+          <div className="container mx-auto px-6">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+              <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Featured Projects
+              </h2>
+              <p className="text-center text-gray-400 mb-16 max-w-2xl mx-auto">
+                Here are some of my recent projects that showcase my skills in full-stack development, performance
+                optimization, and modern web technologies.
+              </p>
+              <BentoGridSecondDemo />
+            </motion.div>
+          </div>
+        </section>
 
         {/* Contact Section */}
         <ContactSection />

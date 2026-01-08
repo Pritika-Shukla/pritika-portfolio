@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { CardContainer, CardItem } from '@/components/ui/card'
-import { Brain, ExternalLink, Github, Zap, BookOpen, User } from 'lucide-react'
+import { Brain, ExternalLink, Github, Zap, BookOpen, User, TrendingUp } from 'lucide-react'
 import { Globe } from 'lucide-react'
 
 const ProjectSection = () => {
@@ -22,20 +22,6 @@ const ProjectSection = () => {
           icon: BookOpen,
         },
         {
-          title: "Portfolio",
-          description: "Modern, responsive portfolio showcasing full-stack development skills with advanced animations and interactive components",
-          achievements: [
-            "Built with Next.js 14, TypeScript, and TailwindCSS for optimal performance",
-            "Advanced animations using Framer Motion with parallax scrolling effects",
-            "Custom UI components including Discord widget, floating dock, and 3D-hover cards",
-            "Fully responsive design with dark mode support and smooth navigation",
-          ],
-          tech: ["Next.js", "TypeScript", "TailwindCSS", "Framer Motion", "Radix UI", "GSAP"],
-          github: "https://github.com/Pritika-Shukla/pritika-portfolio",
-          live: "https://www.pritika.xyz/",
-          icon: User,
-        },
-        {
           title: "DevTest",
           description: "A collaborative interview tool blending real-time coding with video conferencing",
           achievements: [
@@ -50,18 +36,32 @@ const ProjectSection = () => {
           icon: Zap,
         },
         {
-          title: "Medium-Blog",
-          description: "Scalable blogging platform with rich features and secure user authentication",
+          title: "NovaAI",
+          description: "An AI-powered interview practice platform with real-time voice interviews and automated feedback",
           achievements: [
-            "Created full CRUD blogging system with JWT-based login and protected routes",
-            "Built using Cloudflare Workers and Prisma ORM with PostgreSQL for speed and reliability",
-            "Applied Zod for schema validation and TypeScript for type safety",
-            "Modern UI with responsive design and TailwindCSS styling",
+            "Real-time voice interviews with live transcripts and performance tracking",
+            "Resume analysis and automated feedback generation using OpenAI",
+            "PDF reports with detailed performance metrics and responsive dashboard",
+            "Integrated Vapi.ai for voice interactions and Supabase for data management",
           ],
-          tech: ["Next.js", "Cloudflare Workers", "Prisma", "PostgreSQL", "Zod", "TailwindCSS", "TypeScript"],
-          github: "https://github.com/Pritika-Shukla/Medium-Blog",
-          live: "https://github.com/Pritika-Shukla/Medium-Blog",
-          icon: Globe,
+          tech: ["Next.js", "TypeScript", "Supabase", "OpenAI", "Vapi.ai"],
+          github: "https://github.com/Pritika-Shukla/NovaAI",
+          live: "https://nova.pritika.xyz/",
+          icon: Brain,
+        },
+        {
+          title: "StockPulse",
+          description: "A stock market tracking and analysis web application with real-time quotes and AI-powered insights",
+          achievements: [
+            "Real-time stock quotes, interactive charts using TradingView widgets, and personalized watchlists",
+            "Comprehensive dashboards with stock detail pages and market news integration",
+            "AI-powered daily news summary emails delivered via OpenAI and Inngest",
+            "Secure authentication with Clerk and scalable data storage using Prisma with MongoDB",
+          ],
+          tech: ["Next.js", "TypeScript", "Clerk", "Prisma", "MongoDB", "TradingView", "Finnhub API", "OpenAI", "Inngest"],
+          github: "https://github.com/Pritika-Shukla/StockPulse",
+          live: "https://stockpulse.pritika.xyz/",
+          icon: TrendingUp,
         },
         
       ]
