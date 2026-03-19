@@ -99,8 +99,10 @@ export default function HeroSection() {
                         src="/profile.jpg"
                         alt="Pritika Shukla"
                         width={400}
-                        height={500}
-                        className="rounded-[1rem] w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] cursor-pointer object-cover mb-4"
+                        height={400}
+                        priority
+                        loading="eager"
+                        className="rounded-[1rem] cursor-pointer object-cover mb-4"
                       />
                     </CardItem>
                   </Link>

@@ -109,8 +109,8 @@ export const Discord: React.FC<TDiscord> = ({
       ) : (
         <div className="flex items-center gap-2">
           <ImageCont
-            activityImage={activityImage || "./default.png"}
-            activityImageClassName={activityImageClassName || "./default.png"}
+            activityImage={activityImage}
+            activityImageClassName={activityImageClassName}
           />
           <div className="flex flex-col justify-center items-start gap-2">
             <AcitvityInfo
@@ -296,7 +296,7 @@ const ImageCont: React.FC<TImageCont> = ({
   return (
     <div
       className={cn(
-        "relative max-w-[110px] ",
+        "relative w-[110px] h-[110px] ",
         activityImageClassName
       )}
     >
